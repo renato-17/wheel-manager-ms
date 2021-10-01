@@ -16,4 +16,4 @@ spring:
         - id: users-service
           uri: lb://users-service
           predicates:
-            - Path=/user-profiles/**
+            - Path=/api/**
