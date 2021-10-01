@@ -12,3 +12,8 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: users-service
+          uri: lb://users-service
+          predicates:
+            - Path=/user-profiles/**
