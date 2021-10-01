@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "user_profiles")
+@DiscriminatorValue("user-profile")
 @Data
 public class UserProfile extends User{
     @Column(name = "last_name", length = 60, nullable = false)

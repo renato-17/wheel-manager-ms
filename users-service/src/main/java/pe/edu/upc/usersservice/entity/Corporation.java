@@ -2,13 +2,11 @@ package pe.edu.upc.usersservice.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
-@Table(name = "corporations")
+@DiscriminatorValue("corporation")
 @Data
 public class Corporation extends User {
     @Column(length = 15, nullable = false, unique = true)
